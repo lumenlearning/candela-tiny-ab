@@ -1,7 +1,7 @@
 # tiny-ab
 A Tiny A/B Tester Plugin for Wordpress
 
-A tiny A/B testing plugin for Wordpress. Shows different versions of page 
+This tiny A/B testing plugin shows different versions of page 
 content to users based on the last character of their username. 
 
 Put the two versions of content you want to test in elements with IDs of 
