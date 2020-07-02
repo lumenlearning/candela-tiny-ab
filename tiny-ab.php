@@ -34,7 +34,7 @@ function tinyab() { ?>
 
     <script type="text/javaScript">
 
-        /* Assign the PBJ username to the current_user variable in javascipt */
+        /* Assign the Wordpress username to the current_user variable in javascipt */
         var current_user = '<?php echo json_encode(wp_get_current_user()->user_login); ?>';
 
         /* Remove the quotes from the username value */
@@ -42,7 +42,9 @@ function tinyab() { ?>
 
         window.onload = function(){ 
 
-            /*  Hide both versions as soon as the page finishes loading. This isn't a great way to do this, since they have to load first and then disappear. If we could hide them both by default in the theme CSS that would be better.
+            /*  Hide both versions as soon as the page finishes loading. This isn't a great 
+            way to do this, since they have to load first and then disappear. Hiding them both 
+            by default in the theme CSS that would be better.
             */
             document.getElementById("tiny-ab-version-a").style.display = "none";
             document.getElementById("tiny-ab-version-b").style.display = "none";
