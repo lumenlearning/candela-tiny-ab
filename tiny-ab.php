@@ -4,15 +4,15 @@
  * @package Tiny A/B Tester Plugin for Wordpress
  */
 /*
-Plugin Name: Tiny A/B Tester Pluing for Wordpress
-Plugin URI: https://lumenlearning.com/
+Plugin Name: Tiny A/B Tester Plugin for Wordpress
+Plugin URI: https://github.com/kalendar/tiny-ab/
 Description: A tiny A/B testing implementation for Wordpress. Shows different versions 
 of page content to users based on the last character of their username. Depends on 
 a separate method of collecting and comparing data about users' behavior in order 
 to complete the testing.
 Version: 0.0.1
-Author: David Wiley
-Author URI: https://davidwiley.org/
+Author: David Wiley / Lumen Learning
+Author URI: https://lumenlearning.com/
 License: MIT
 Text Domain: tiny-ab
 */
