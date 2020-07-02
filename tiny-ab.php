@@ -1,10 +1,10 @@
 <?php
 /**
  * @author David Wiley <david@lumenlearning.com>
- * @package Tiny A/B Tester for Wordpress
+ * @package Tiny A/B Tester Plugin for Wordpress
  */
 /*
-Plugin Name: Tiny A/B Tester for Wordpress
+Plugin Name: Tiny A/B Tester Pluing for Wordpress
 Plugin URI: https://lumenlearning.com/
 Description: A tiny A/B testing implementation for Wordpress. Shows different versions 
 of page content to users based on the last character of their username. Depends on 
