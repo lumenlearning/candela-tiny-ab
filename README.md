@@ -7,9 +7,9 @@ content to users based on the last character of their username.
 Put the two versions of content you want to test in elements with IDs of 
 "tiny-ab-version-a" and  "tiny-ab-version-b", like so: 
 
-<p id = "tiny-ab-version-a">This is version A.</p> 
+&lt;p id = "tiny-ab-version-a"&gt;This is version A.&lt;/p&gt;
 
-<p id = "tiny-ab-version-b">This is version B.</p> 
+&lt;p id = "tiny-ab-version-b"&gt;This is version B.&lt;/p&gt; 
 
 Logged in users will see one version or the other depending on the last
 character of their username. Usernames ending a-m or 0-4 will see version A,
