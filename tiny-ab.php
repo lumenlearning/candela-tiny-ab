@@ -50,8 +50,7 @@ function tinyab() { ?>
             document.getElementById("tiny-ab-version-b").style.display = "none";
 
 
-            /* Select the last character from the user name. (Since we 
-            get this in quotes, take the second to last character.) */
+            /* Select the last character from the user name. */
             var last_char = current_user.slice(-1);
 
 
@@ -60,10 +59,11 @@ function tinyab() { ?>
             if (/[abcdefghijklm]/.test(last_char) || /[0-4]/.test(last_char)) {
                 document.getElementById("tiny-ab-version-a").style.display = "block";
 
-            /* If not, show version B */
-                } else {
+            /* If the username ends with something else, or if no user is logged in, 
+            show version B. */
+            } else {
                 document.getElementById("tiny-ab-version-b").style.display = "block";
-                }
+            }
         }
     </script>
 <?php
