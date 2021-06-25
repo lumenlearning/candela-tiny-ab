@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) or die( 'For real, dude?' );
 
 function tinyab() { ?>
 
-<style type = "text/css>
+<style type = "text/css">
     .ab-test-alternative { display: none; }
 </style>
 
