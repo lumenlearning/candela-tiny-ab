@@ -29,11 +29,11 @@ defined( 'ABSPATH' ) or die( 'For real, dude?' );
 
 function tinyab() { ?>
 
-<style type = "text/css">
+  <style>
     .ab-test-alternative { display: none; }
-</style>
+  </style>
 
-  <script type="text/javascript">
+  <script>
 
         window.onload = function(){
 
