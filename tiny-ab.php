@@ -1,29 +1,25 @@
 <?php
 /**
- * @author David Wiley <david@lumenlearning.com>
- * @package Tiny A/B Tester Plugin for WordPress
- */
-/*
-Plugin Name: Tiny A/B Tester Plugin for WordPress
-Plugin URI: https://github.com/kalendar/tiny-ab/
-Description: A tiny A/B testing implementation for WordPress. Shows different versions 
+ * Plugin Name:       Tiny A/B Tester Plugin for WordPress
+ * GitHub Plugin URI: https://github.com/lumenlearning/candela-tiny-ab
+ * Description:       A tiny A/B testing implementation for WordPress. Shows different versions 
 of page content to users based on the last character of their username. Depends on 
 a separate method of collecting and comparing data about users' behavior in order 
 to complete the testing.
-Version: 0.1.0
-Author: David Wiley / Lumen Learning
-Author URI: https://lumenlearning.com/
-License: MIT
-Text Domain: tiny-ab
-*/
+ * Version:           0.1.1
+ * Author:            David Wiley / Lumen Learning
+ * Author URI:        http://lumenlearning.com
+ * License:           MIT
+ * Text Domain:       lumen
+ */
 
 /*
 HOW TO USE THIS PLUGIN. 
 Put the two versions of content you want
-to test in elements with classes of "ab-test-original" and 
-"ab-test-alternative", like so: 
-<p class = "ab-test-original">This is version A.</p> 
-<p class = "ab-test-alternative">This is version B.</p> 
+to test in elements with classes of 'ab-test-original' and 
+'ab-test-alternative', like so: 
+<p class="ab-test-original">This is version A.</p> 
+<p class="ab-test-alternative">This is version B.</p> 
 Users will see one version or the other depending on the last 
 character of their lti_user_context. Users without an 
 lti_context_id will see ab-test-original version.
