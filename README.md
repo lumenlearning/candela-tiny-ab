@@ -1,5 +1,5 @@
 # tiny-ab
-A Tiny A/B Testing Plugin for Wordpress
+A Tiny A/B Testing Plugin for WordPress
 
 This tiny A/B testing plugin shows different versions of page 
 content to users based on the last character of their lti_context_id. 
