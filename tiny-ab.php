@@ -26,4 +26,9 @@ lti_context_id will see ab-test-original version.
 // Exit if accessed directly
 defined( 'ABSPATH' ) || exit;
 
-wp_enqueue_script( 'lumen-tinyab-js', plugins_url( 'tiny-ab.js', __FILE__ ), array(), '0.1.1', true );
+add_action('wp_enqueue_scripts', 'tiny_ab_enqueue');
+function tiny_ab_enqueue() {
+  if (is_single()) {
+    wp_enqueue_script( 'lumen-tinyab-js', plugins_url( 'tiny-ab.js', __FILE__ ), array(), '0.1.1', true );
+  }
+}
