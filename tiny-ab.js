@@ -3,11 +3,9 @@ const tinyABinit = () => {
   const contentAlt = document.getElementsByClassName('ab-test-alternative');
   const urlParams = new URLSearchParams(window.location.search);
   const testCriteria = (contentAlt.length > 0) && (urlParams.has('lti_context_id'));
+  const id = urlParams.get('lti_context_id');
 
-  if (testCriteria) {
-    const id = urlParams.get('lti_context_id');
-    runTinyAB(contentOriginal, contentAlt, id);
-  }
+  testCriteria ? runTinyAB(contentOriginal, contentAlt, id) : removeElements(contentAlt);
 }
 
 const removeElements = (group) => Array.from(group).forEach(element => element.remove());
