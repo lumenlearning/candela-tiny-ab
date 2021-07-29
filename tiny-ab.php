@@ -11,17 +11,7 @@
  * Version:           0.1.1
  */
 
-/*
-HOW TO USE THIS PLUGIN. 
-Put the two versions of content you want
-to test in elements with classes of 'ab-test-original' and 
-'ab-test-alternative', like so: 
-<p class="ab-test-original">This is version A.</p> 
-<p class="ab-test-alternative">This is version B.</p> 
-Users will see one version or the other depending on the last 
-character of their lti_user_context. Users without an 
-lti_context_id will see ab-test-original version.
-*/
+/* See README for instructions on how to create an A/B test. */
 
 // Exit if accessed directly
 defined( 'ABSPATH' ) || exit;
