@@ -27,6 +27,5 @@ Multiple page elements can be marked this way.
 
 ## ⚠️ Limitations
 This implementation of the plugin:
-- Requires the two elements to be next to each other _and_ for the original to be first.
 - Only works on WordPress posts and pages (see [`is_single`](https://developer.wordpress.org/reference/functions/is_single/)).
 - Does not collect any data about user behavior and depends on a separate method of collecting and comparing data about users' behavior in order to complete the A/B testing
