@@ -6,36 +6,18 @@ const tinyABinit = () => {
 
   if (testCriteria) {
     const id = urlParams.get('lti_context_id');
-    addCSS();
     runTinyAB(contentOriginal, contentAlt, id);
   }
 }
 
-const addCSS = () => {
-  const style = document.createElement('style');
-  style.innerHTML = `
-    .ab-test-original+.ab-test-alternative { display: none; }
-  `;
-  document.head.appendChild(style);
-}
+const removeElements = (group) => Array.from(group).forEach(element => element.remove());
 
 const runTinyAB = (contentOriginal, contentAlt, id) => {
   const lastChar = id.slice(-1);
   const altChars = ['1', '3', '5', '7', '9', 'b', 'd', 'f'];
   const showAlt = altChars.includes(lastChar);
 
-  showAlt ? (
-    Array.from(contentOriginal).forEach(original => {
-      original.remove();
-    }),
-    Array.from(contentAlt).forEach(alt => {
-      alt.style.display = 'block';
-    })
-  ) : (
-    Array.from(contentAlt).forEach(alt => {
-      alt.remove();
-    })
-  );
+  showAlt ? removeElements(contentOriginal) : removeElements(contentAlt);
 }
 
 tinyABinit();
