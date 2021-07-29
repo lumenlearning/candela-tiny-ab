@@ -25,15 +25,15 @@ let runTinyAB = (contentOriginal, contentAlt, id) => {
   const showAlt = altChars.includes(lastChar);
 
   showAlt ? (
-    Array.from(contentAlt).forEach(alt => {
-      alt.remove();
-    })  
-  ) : (
     Array.from(contentOriginal).forEach(original => {
       original.remove();
     }),
     Array.from(contentAlt).forEach(alt => {
       alt.style.display = 'block';
+    })
+  ) : (
+    Array.from(contentAlt).forEach(alt => {
+      alt.remove();
     })
   );
 }
