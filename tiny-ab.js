@@ -1,4 +1,4 @@
-let tinyABinit = () => {
+const tinyABinit = () => {
   const contentOriginal = document.getElementsByClassName('ab-test-original');
   const contentAlt = document.getElementsByClassName('ab-test-alternative');
   const urlParams = new URLSearchParams(window.location.search);
@@ -11,7 +11,7 @@ let tinyABinit = () => {
   }
 }
 
-let addCSS = () => {
+const addCSS = () => {
   const style = document.createElement('style');
   style.innerHTML = `
     .ab-test-original+.ab-test-alternative { display: none; }
@@ -19,7 +19,7 @@ let addCSS = () => {
   document.head.appendChild(style);
 }
 
-let runTinyAB = (contentOriginal, contentAlt, id) => {
+const runTinyAB = (contentOriginal, contentAlt, id) => {
   const lastChar = id.slice(-1);
   const altChars = ['1', '3', '5', '7', '9', 'b', 'd', 'f'];
   const showAlt = altChars.includes(lastChar);
