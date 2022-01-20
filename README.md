@@ -1,23 +1,31 @@
-# tiny-ab
-A Tiny A/B Testing Plugin for Wordpress
+# Candela Tiny A/B Tester
 
-This tiny A/B testing plugin shows different versions of page 
-content to users based on the last character of their lti_context_id. 
+This tiny A/B testing plugin shows different versions of page content to users based on the last character of their `lti_context_id`.
 
-Put the two versions of content you want to test in elements with classes of 
-"ab-test-original" and  "ab-test-alternative", like so: 
+The plugin requires a minimum of two pieces of content: one marked as the original and the other marked as the alternative (see Instructions below for more detail).
 
-&lt;p class = "ab-test-original"&gt;This is the original version.&lt;/p&gt;
+- The **original content** will be shown to users without an `lti_context_id` _or_ when the last character of their `lti_context_id`:
+  - is an even number (`0`, `2`, `4`, `6`, `8`)
+  - does _not_ match `b`, `d` or `f`
+- The **alternative content** will be shown to users when the last character of their `lti_context_id`:
+  - is an odd number (`1`, `3`, `5`, `7`, `9`)
+  - matches `b`, `d` or `f`
 
-&lt;p class = "ab-test-alternative"&gt;This is the alterante version.&lt;/p&gt; 
+## ✍️ Instructions
+
+Put the two versions of content you want to test in elements with classes of `ab-test-original` and  `ab-test-alternative`, like so:
+
+```
+<p class="ab-test-original">This is the original version.</p>
+
+<p class="ab-test-alternative">This is the alternate version.</p>
+```
+
+The classnames are not restricted to `p` elements and the HTML elements with these classnames do _not_ need to match (i.e., one element can be a `p` and the other can be a `div` and all will work as expected).
 
 Multiple page elements can be marked this way.
 
-Users with an lti_context_id whose last character is '1', '3', '5', '7', '9', 
-'b', 'd', or 'f' will see the alternate version. All other users (including
-those without an lti_context_id) will see the original version.
-
-This plugin only shows different content to users. It does not collect any data
-about user behavior. That is, this plugin depends on a separate method of 
-collecting and comparing data about users' behavior in order to complete the 
-A/B testing.
+## ⚠️ Limitations
+This implementation of the plugin:
+- Only works on WordPress posts and pages (see [`is_single`](https://developer.wordpress.org/reference/functions/is_single/)).
+- Does not collect any data about user behavior and depends on a separate method of collecting and comparing data about users' behavior in order to complete the A/B testing
