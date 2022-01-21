@@ -1,6 +1,6 @@
 # Candela Tiny A/B Tester
 
-This tiny A/B testing plugin shows different versions of page content to users based on the last character of their Wordpress username (which in the Lumen PBJ case is the lti_user_id provided by the user's LMS).
+This tiny A/B testing plugin shows different versions of page content to users based on the last character of their Wordpress `username` (which in the Lumen PBJ case is the `lti_user_id` provided by the user's LMS). Because of the way the LMS generates a `lti_user_id`, the `username` should always end with a `0-9` or `a-f`.
 
 The plugin requires a minimum of two pieces of content: one marked as the original and the other marked as the alternative (see Instructions below for more detail).
 
