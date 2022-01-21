@@ -3,7 +3,7 @@ const tinyABinit = () => {
     const contentAlt = document.getElementsByClassName('ab-test-alternative');
     const id = wp_user_info.username.data.display_name;
     const testCriteria = (contentAlt.length > 0) && (typeof id !== 'undefined');
-    window.alert(id);
+    
     testCriteria ? runTinyAB(contentOriginal, contentAlt, id) : removeElements(contentAlt);
   }
 
