@@ -2,8 +2,7 @@
 /**
  * Plugin Name:       Candela Tiny A/B Tester
  * GitHub Plugin URI: https://github.com/lumenlearning/candela-tiny-ab
- * Description:       Shows different blocks of page content to users based on the last character
- * of their username.
+ * Description:       Shows different blocks of page content to users based on the last character of their username.
  * Author:            David Wiley / Lumen Learning
  * Author URI:        http://lumenlearning.com
  * Text Domain:       lumen
