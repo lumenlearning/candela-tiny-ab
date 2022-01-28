@@ -1,13 +1,13 @@
 # Candela Tiny A/B Tester
 
-This tiny A/B testing plugin shows different versions of page content to users based on the last character of their `lti_context_id`.
+This tiny A/B testing plugin shows different versions of page content to users based on the last character of their Wordpress `username` (which in the Lumen PBJ case is the `lti_user_id` provided by the user's LMS). Because of the way the LMS generates a `lti_user_id`, the `username` should always end with a `0-9` or `a-f`.
 
 The plugin requires a minimum of two pieces of content: one marked as the original and the other marked as the alternative (see Instructions below for more detail).
 
-- The **original content** will be shown to users without an `lti_context_id` _or_ when the last character of their `lti_context_id`:
+- The **original content** will be shown to users who are not logged in _or_ when the last character of their `username`:
   - is an even number (`0`, `2`, `4`, `6`, `8`)
   - does _not_ match `b`, `d` or `f`
-- The **alternative content** will be shown to users when the last character of their `lti_context_id`:
+- The **alternative content** will be shown to users when the last character of their `username`:
   - is an odd number (`1`, `3`, `5`, `7`, `9`)
   - matches `b`, `d` or `f`
 
@@ -28,4 +28,4 @@ Multiple page elements can be marked this way.
 ## ⚠️ Limitations
 This implementation of the plugin:
 - Only works on WordPress posts and pages (see [`is_single`](https://developer.wordpress.org/reference/functions/is_single/)).
-- Does not collect any data about user behavior and depends on a separate method of collecting and comparing data about users' behavior in order to complete the A/B testing
+- Does not collect any data about user behavior and depends on a separate method of collecting and comparing data about users' behavior in order to complete the A/B testing.
