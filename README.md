@@ -6,7 +6,7 @@ The plugin requires a minimum of two pieces of content: one marked as the origin
 
 - The **original content** will be shown to users who are not logged in _or_ when the last character of their `username`:
   - is an even number (`0`, `2`, `4`, `6`, `8`)
-  - does _not_ match `b`, `d` or `f`
+  - does _not_ match `a`, `c` or `e`
 - The **alternative content** will be shown to users when the last character of their `username`:
   - is an odd number (`1`, `3`, `5`, `7`, `9`)
   - matches `b`, `d` or `f`
